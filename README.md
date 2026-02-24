@@ -1,147 +1,187 @@
-🚀 Data Structures & Algorithms in C++
-📌 Sobre o Projeto
+# 🚀 Data Structures & Algorithms in C++
 
-Este repositório apresenta implementações práticas de Estruturas de Dados e Algoritmos Clássicos desenvolvidos em C++, com foco em:
+## 📌 Visão Geral
 
-Análise de desempenho
+Este repositório reúne implementações práticas de **Estruturas de Dados** e **Algoritmos Clássicos** desenvolvidos em C++, com foco em:
 
-Complexidade computacional
+* 📊 Análise de desempenho
+* 🧮 Complexidade computacional
+* 🗂 Organização eficiente de dados
+* 🧠 Aplicação prática de fundamentos teóricos da Ciência da Computação
 
-Organização e eficiência de dados
+O projeto consolida conceitos essenciais como **Divide and Conquer**, **endereçamento aberto em tabelas hash**, **árvores binárias completas** e **busca em grafos**, demonstrando domínio de estruturas fundamentais utilizadas em sistemas reais.
 
-Aplicação prática de conceitos teóricos
+---
 
-O projeto demonstra domínio de fundamentos essenciais da Ciência da Computação, aplicando conceitos como dividir para conquistar, endereçamento aberto, árvores binárias completas e busca em grafos.
+# 🧠 Algoritmos de Ordenação
 
-🧠 Algoritmos de Ordenação
+📁 `main.cpp`
+📁 `bubbleselec.cpp`
 
-📁 main.cpp
-📁 bubbleselec.cpp
+Implementação e comparação empírica de diferentes algoritmos de ordenação aplicados a:
 
-Implementação e comparação de desempenho entre diferentes algoritmos de ordenação utilizando:
+* Vetores de inteiros gerados aleatoriamente
+* Vetores de strings carregadas a partir de arquivos
 
-Vetores de inteiros aleatórios
+---
 
-Vetores de strings lidas de arquivos
+## 🔎 Algoritmos Implementados
 
-🔎 Algoritmos Implementados
-• Bubble Sort
+### 🔹 Bubble Sort
 
-Algoritmo iterativo que realiza trocas sucessivas, movendo o maior elemento para o final a cada iteração.
-Complexidade: O(n²)
+Algoritmo iterativo baseado em trocas sucessivas de elementos adjacentes.
 
-• Selection Sort
+* Complexidade: **O(n²)**
+* Simples implementação
+* Baixa eficiência para grandes volumes de dados
 
-Seleciona o menor elemento da lista e o posiciona corretamente a cada passo.
-Complexidade: O(n²)
+---
 
-• Insertion Sort
+### 🔹 Selection Sort
 
-Insere cada elemento na posição correta dentro da parte já ordenada do vetor.
-Eficiente para pequenos volumes de dados.
-Complexidade: O(n²)
+Seleciona o menor elemento da lista a cada iteração e o posiciona corretamente.
 
-• Shell Sort
+* Complexidade: **O(n²)**
+* Reduz número de trocas comparado ao Bubble Sort
 
-Extensão do Insertion Sort que permite comparações entre elementos distantes, reduzindo o número de trocas.
-Complexidade média: ~O(n log n)
+---
 
-• Merge Sort
+### 🔹 Insertion Sort
 
-Algoritmo baseado na estratégia Divide and Conquer, dividindo o problema em subproblemas menores até que cada um tenha apenas um elemento.
-Complexidade: O(n log n)
+Insere cada elemento na posição adequada dentro da parte já ordenada do vetor.
 
-🗃️ Estruturas de Dados
+* Complexidade: **O(n²)**
+* Bom desempenho para conjuntos pequenos ou quase ordenados
 
-📁 lab05.cpp
-📁 hash.cpp
+---
 
-🔹 Min-Heap
+### 🔹 Shell Sort
 
-Implementação de uma árvore binária completa onde:
+Generalização do Insertion Sort que permite comparações entre elementos distantes, reduzindo deslocamentos.
 
-O nó pai possui valor menor ou igual aos filhos
+* Complexidade média: **≈ O(n log n)**
+* Melhor desempenho prático que algoritmos quadráticos
 
-Inserção com heapify_up
+---
 
-Remoção com heapify_down
+### 🔹 Merge Sort
 
-Permite operações eficientes de prioridade com complexidade O(log n).
+Baseado na estratégia **Divide and Conquer**, divide o problema recursivamente até unidades mínimas e realiza a intercalação ordenada.
 
-🔹 Hash Table
+* Complexidade: **O(n log n)**
+* Estável
+* Excelente desempenho para grandes conjuntos de dados
 
-Estrutura para armazenamento de objetos (carros), utilizando:
+---
 
-Chave: Placa do veículo
+# 🗃️ Estruturas de Dados
 
-Função Hash: Baseada em valores ASCII
+📁 `lab05.cpp`
+📁 `hash.cpp`
 
-Tratamento de colisão: Endereçamento Aberto (Linear Probing)
+---
 
-Permite acesso médio em O(1).
+## 🔹 Min-Heap
 
-🌎 Teoria dos Grafos
+Implementação de uma **árvore binária completa** onde:
 
-📁 lab04.cpp
+* O nó pai possui valor ≤ seus filhos
+* Inserção com `heapify_up`
+* Remoção com `heapify_down`
 
-🔹 Busca em Profundidade (DFS)
+Permite operações eficientes de fila de prioridade com:
 
-Aplicação prática de grafos para representar conexões entre cidades em um mapa de rodovias.
+* Inserção: **O(log n)**
+* Remoção: **O(log n)**
 
-O algoritmo Depth-First Search (DFS) explora completamente cada ramo antes de retroceder, sendo utilizado para:
+---
 
-Identificar todas as cidades acessíveis a partir de um ponto inicial
+## 🔹 Hash Table
 
-Explorar conectividade em grafos
+Estrutura de armazenamento de objetos (ex.: veículos), utilizando:
 
-Complexidade: O(V + E)
+* 🔑 **Chave:** Placa do veículo
+* 🧮 **Função Hash:** Baseada em valores ASCII
+* 🔁 **Tratamento de colisão:** Endereçamento Aberto (Linear Probing)
 
-📊 Análise de Desempenho
+Complexidade média de acesso:
 
-Os testes realizados demonstram claramente a diferença entre:
+* **O(1)**
 
-Algoritmos de complexidade O(n²)
+---
 
-Algoritmos de complexidade O(n log n)
+# 🌎 Teoria dos Grafos
 
-À medida que o volume de dados cresce, algoritmos como Merge Sort e Shell Sort apresentam desempenho significativamente superior em relação a Bubble Sort, Selection Sort e Insertion Sort.
+📁 `lab04.cpp`
 
-Essa comparação reforça a importância da escolha adequada do algoritmo conforme a escala do problema.
+## 🔹 Depth-First Search (DFS)
 
-🛠️ Tecnologias Utilizadas
+Aplicação prática de grafos representando conexões entre cidades em um mapa rodoviário.
 
-Linguagem: C++
+O algoritmo **Busca em Profundidade (DFS)**:
 
-Bibliotecas padrão:
+* Explora completamente cada ramo antes de retroceder
+* Identifica todos os vértices alcançáveis a partir de um ponto inicial
+* Analisa conectividade em grafos
 
-iostream
+Complexidade:
 
-vector
+* **O(V + E)**
 
-fstream
+---
 
-ctime
+# 📊 Análise de Desempenho
 
-string
+Os testes realizados evidenciam claramente a diferença entre:
 
-▶️ Como Executar
-Compilação
+* Algoritmos de complexidade **O(n²)**
+* Algoritmos de complexidade **O(n log n)**
+
+À medida que o volume de dados cresce:
+
+* **Merge Sort** e **Shell Sort** apresentam desempenho significativamente superior
+* Algoritmos quadráticos tornam-se inviáveis em larga escala
+
+A comparação reforça a importância da escolha estratégica de algoritmos conforme a dimensão do problema.
+
+---
+
+# 🛠 Tecnologias Utilizadas
+
+* Linguagem: **C++**
+* Bibliotecas padrão:
+
+  * `iostream`
+  * `vector`
+  * `fstream`
+  * `ctime`
+  * `string`
+
+---
+
+# ▶️ Como Executar
+
+### 🔹 Compilação
+
+```bash
 g++ nome_do_arquivo.cpp -o programa
-Execução
+```
+
+### 🔹 Execução
+
+```bash
 ./programa
+```
 
-⚠️ No main.cpp, verifique se o caminho do arquivo aurelio40000.txt está configurado corretamente em sua máquina para garantir a leitura adequada dos dados.
+⚠️ No arquivo `main.cpp`, verifique se o caminho do arquivo `aurelio40000.txt` está corretamente configurado para evitar erros de leitura.
 
-🎯 Competências Demonstradas
+---
 
-Estruturas de Dados clássicas e avançadas
+# 🎯 Competências Demonstradas
 
-Análise de Complexidade
-
-Organização eficiente de dados
-
-Manipulação de arquivos em C++
-
-Aplicação prática de Grafos
-
-Comparação empírica de desempenho
+* Implementação de Estruturas de Dados clássicas
+* Análise formal de complexidade
+* Comparação empírica de desempenho
+* Manipulação de arquivos em C++
+* Modelagem e exploração de grafos
+* Organização e estruturação de código
