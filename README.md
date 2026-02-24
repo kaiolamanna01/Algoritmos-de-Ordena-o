@@ -1,46 +1,147 @@
-Este repositório contém uma coleção de implementações práticas de estruturas de dados e algoritmos fundamentais desenvolvidos em C++. O conteúdo abrange desde métodos de ordenação clássicos até estruturas avançadas como Heaps e Tabelas Hash, além de busca em grafos.
+🚀 Data Structures & Algorithms in C++
+📌 Sobre o Projeto
 
-📂 Conteúdo do Repositório
-1. Algoritmos de Ordenação (main.cpp e bubbleselec.cpp)
-Comparações de desempenho entre diferentes estratégias de ordenação, utilizando vetores de strings (lidos de arquivos) e vetores de inteiros aleatórios.
+Este repositório apresenta implementações práticas de Estruturas de Dados e Algoritmos Clássicos desenvolvidos em C++, com foco em:
 
-Bubble Sort: Algoritmo iterativo simples que flutua o maior elemento para o fim a cada passagem.
+Análise de desempenho
 
-Selection Sort: Seleciona o menor elemento e o coloca na posição correta.
+Complexidade computacional
 
-Insertion Sort: Constrói a lista final um item por vez, eficiente para conjuntos de dados pequenos.
+Organização e eficiência de dados
 
-Shell Sort: Uma generalização do Insertion Sort que permite a troca de itens distantes.
+Aplicação prática de conceitos teóricos
 
-Merge Sort: Algoritmo do tipo "dividir para conquistar" que divide a lista em sub-listas até que cada uma tenha um elemento e as combina de forma ordenada.
+O projeto demonstra domínio de fundamentos essenciais da Ciência da Computação, aplicando conceitos como dividir para conquistar, endereçamento aberto, árvores binárias completas e busca em grafos.
 
-2. Estruturas de Dados Avançadas (lab05.cpp e hash.cpp)
-Implementações focadas em eficiência de acesso e organização de dados.
+🧠 Algoritmos de Ordenação
 
-Min-Heap: Uma árvore binária completa onde o valor de cada nó pai é menor ou igual ao valor de seus filhos. Inclui operações de push (inserção com heapfy_up) e pop (remoção do menor elemento com heapfy_down).
+📁 main.cpp
+📁 bubbleselec.cpp
 
-Tabela Hash (Hash Table): Sistema de armazenamento de objetos (neste caso, carros) usando chaves (placas). Utiliza uma função hash baseada em valores ASCII e Endereçamento Aberto (Linear Probing) para tratar colisões.
+Implementação e comparação de desempenho entre diferentes algoritmos de ordenação utilizando:
 
-3. Teoria dos Grafos (lab04.cpp)
-Aplicação prática de grafos para representar conexões entre cidades.
+Vetores de inteiros aleatórios
 
-Busca em Profundidade (DFS): O algoritmo explora o máximo possível ao longo de cada ramo antes de retroceder. É utilizado aqui para identificar todas as cidades acessíveis a partir de um ponto de partida em um mapa de rodovias.
+Vetores de strings lidas de arquivos
+
+🔎 Algoritmos Implementados
+• Bubble Sort
+
+Algoritmo iterativo que realiza trocas sucessivas, movendo o maior elemento para o final a cada iteração.
+Complexidade: O(n²)
+
+• Selection Sort
+
+Seleciona o menor elemento da lista e o posiciona corretamente a cada passo.
+Complexidade: O(n²)
+
+• Insertion Sort
+
+Insere cada elemento na posição correta dentro da parte já ordenada do vetor.
+Eficiente para pequenos volumes de dados.
+Complexidade: O(n²)
+
+• Shell Sort
+
+Extensão do Insertion Sort que permite comparações entre elementos distantes, reduzindo o número de trocas.
+Complexidade média: ~O(n log n)
+
+• Merge Sort
+
+Algoritmo baseado na estratégia Divide and Conquer, dividindo o problema em subproblemas menores até que cada um tenha apenas um elemento.
+Complexidade: O(n log n)
+
+🗃️ Estruturas de Dados
+
+📁 lab05.cpp
+📁 hash.cpp
+
+🔹 Min-Heap
+
+Implementação de uma árvore binária completa onde:
+
+O nó pai possui valor menor ou igual aos filhos
+
+Inserção com heapify_up
+
+Remoção com heapify_down
+
+Permite operações eficientes de prioridade com complexidade O(log n).
+
+🔹 Hash Table
+
+Estrutura para armazenamento de objetos (carros), utilizando:
+
+Chave: Placa do veículo
+
+Função Hash: Baseada em valores ASCII
+
+Tratamento de colisão: Endereçamento Aberto (Linear Probing)
+
+Permite acesso médio em O(1).
+
+🌎 Teoria dos Grafos
+
+📁 lab04.cpp
+
+🔹 Busca em Profundidade (DFS)
+
+Aplicação prática de grafos para representar conexões entre cidades em um mapa de rodovias.
+
+O algoritmo Depth-First Search (DFS) explora completamente cada ramo antes de retroceder, sendo utilizado para:
+
+Identificar todas as cidades acessíveis a partir de um ponto inicial
+
+Explorar conectividade em grafos
+
+Complexidade: O(V + E)
+
+📊 Análise de Desempenho
+
+Os testes realizados demonstram claramente a diferença entre:
+
+Algoritmos de complexidade O(n²)
+
+Algoritmos de complexidade O(n log n)
+
+À medida que o volume de dados cresce, algoritmos como Merge Sort e Shell Sort apresentam desempenho significativamente superior em relação a Bubble Sort, Selection Sort e Insertion Sort.
+
+Essa comparação reforça a importância da escolha adequada do algoritmo conforme a escala do problema.
 
 🛠️ Tecnologias Utilizadas
+
 Linguagem: C++
 
-Bibliotecas Padrão: iostream, vector, fstream (para manipulação de arquivos), ctime (para medição de tempo de execução) e string.
+Bibliotecas padrão:
 
-🚀 Como Executar
-Compilação: Utilize um compilador como o g++.
+iostream
 
-Bash
+vector
+
+fstream
+
+ctime
+
+string
+
+▶️ Como Executar
+Compilação
 g++ nome_do_arquivo.cpp -o programa
-Execução:
-
-Bash
+Execução
 ./programa
-Nota: No arquivo main.cpp, certifique-se de que o caminho do arquivo de texto aurelio40000.txt esteja correto em sua máquina local para que a leitura dos dados funcione conforme o esperado.
 
-📈 Análise de Desempenho
-Conforme observado nos comentários do código (main.cpp), algoritmos mais complexos como Merge Sort e Shell Sort apresentam um desempenho significativamente superior ao Insertion Sort e Bubble Sort conforme o volume de dados (n) cresce, demonstrando a importância da complexidade computacional O(nlogn) frente a O(n2).
+⚠️ No main.cpp, verifique se o caminho do arquivo aurelio40000.txt está configurado corretamente em sua máquina para garantir a leitura adequada dos dados.
+
+🎯 Competências Demonstradas
+
+Estruturas de Dados clássicas e avançadas
+
+Análise de Complexidade
+
+Organização eficiente de dados
+
+Manipulação de arquivos em C++
+
+Aplicação prática de Grafos
+
+Comparação empírica de desempenho
